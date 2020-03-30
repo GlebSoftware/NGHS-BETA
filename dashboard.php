@@ -19,7 +19,7 @@ if ((isset($_SERVER['QUERY_STRING'])) && ($_SERVER['QUERY_STRING'] != "")){
 }
 
 if ((isset($_GET['doLogout'])) &&($_GET['doLogout']=="true")){
-  //to fully log out a visitor we need to clear the session varialbles
+  //to fully log out a visitor we need to clear the session variables
   $_SESSION['MM_Username'] = NULL;
   $_SESSION['MM_UserGroup'] = NULL;
   $_SESSION['PrevUrl'] = NULL;
@@ -166,10 +166,11 @@ if (isset($_SERVER['QUERY_STRING'])) {
 	{
 
 if ((isset($_POST["MM_update"])) && ($_POST["MM_update"] == "updateProfile")) {
-  $updateSQL = sprintf("UPDATE beta_members SET email=%s, fName=%s, lName=%s, phone=%s, tshirt=%s, lunch=%s WHERE stuID=%s",
+  $updateSQL = sprintf("UPDATE beta_members SET email=%s, fName=%s, lName=%s, year=%s, phone=%s, tshirt=%s, lunch=%s WHERE stuID=%s",
                        GetSQLValueString($_POST['email'], "text"),
                        GetSQLValueString($_POST['fName'], "text"),
                        GetSQLValueString($_POST['lName'], "text"),
+                       GetSQLValueString($_POST['year'], "text"),
                        GetSQLValueString($_POST['phone'], "text"),
                        GetSQLValueString($_POST['tshirt'], "text"),
                        GetSQLValueString($_POST['lunch'], "text"),
@@ -387,7 +388,7 @@ $totalRows_applicant = mysql_num_rows($applicant);
             First Name: <input name="fName" type="text" value="<?php echo $row_memberInformation['fName']; ?>" /><br />
             Last Name: <input name="lName" type="text" value="<?php echo $row_memberInformation['lName']; ?>" /><br />
             Email: <input name="email" type="text" value="<?php echo $row_memberInformation['email']; ?>" /><br />
-            Graduation Year: <input name="year" type="text" value="<?php echo $row_memberInformation['year']; ?>" readonly="readonly" style="background:none;" /><br />
+            Graduation Year: <input name="year" type="text" value="<?php echo $row_memberInformation['year']; ?>" style="background:none;" /><br />
             Phone: <input name="phone" type="text" value="<?php echo $row_memberInformation['phone']; ?>" /><br />
             T-shirt: <select name="tshirt"><option value="s" <?php if (!(strcmp("s", $row_memberInformation['tshirt']))) {echo "selected=\"selected\"";} ?>>Small</option><option value="m" <?php if (!(strcmp("m", $row_memberInformation['tshirt']))) {echo "selected=\"selected\"";} ?>>Medium</option><option value="l" <?php if (!(strcmp("l", $row_memberInformation['tshirt']))) {echo "selected=\"selected\"";} ?>>Large</option><option value="xl" <?php if (!(strcmp("xl", $row_memberInformation['tshirt']))) {echo "selected=\"selected\"";} ?>>Extra Large</option></select><br/>
             Lunch: <select name="lunch"><option value="4" selected="selected" <?php if (!(strcmp(4, $row_memberInformation['lunch']))) {echo "selected=\"selected\"";} ?>>4th</option><option value="5" <?php if (!(strcmp(5, $row_memberInformation['lunch']))) {echo "selected=\"selected\"";} ?>>5th</option><option value="6" <?php if (!(strcmp(6, $row_memberInformation['lunch']))) {echo "selected=\"selected\"";} ?>>6th</option></select><br />
