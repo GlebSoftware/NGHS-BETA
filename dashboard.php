@@ -19,7 +19,7 @@ if ((isset($_SERVER['QUERY_STRING'])) && ($_SERVER['QUERY_STRING'] != "")){
 }
 
 if ((isset($_GET['doLogout'])) &&($_GET['doLogout']=="true")){
-  //to fully log out a visitor we need to clear the session variables
+  //to fully log out a visitor we need to clear the session varialbles
   $_SESSION['MM_Username'] = NULL;
   $_SESSION['MM_UserGroup'] = NULL;
   $_SESSION['PrevUrl'] = NULL;
@@ -385,10 +385,10 @@ $totalRows_applicant = mysql_num_rows($applicant);
             ?>
     
             Student ID: <input name="stuID" type="text" value="<?php echo $row_memberInformation['stuID']; ?>" readonly="readonly" style="background:none;" /><br />
-            First Name: <input name="fName" type="text" value="<?php echo $row_memberInformation['fName']; ?>" /><br />
-            Last Name: <input name="lName" type="text" value="<?php echo $row_memberInformation['lName']; ?>" /><br />
+            First Name: <input name="fName" type="text" value="<?php echo $row_memberInformation['fName']; ?>" readonly="readonly" style="background:none;"/><br />
+            Last Name: <input name="lName" type="text" value="<?php echo $row_memberInformation['lName']; ?>" readonly="readonly" style="background:none;"/><br />
             Email: <input name="email" type="text" value="<?php echo $row_memberInformation['email']; ?>" /><br />
-            Graduation Year: <input name="year" type="text" value="<?php echo $row_memberInformation['year']; ?>" style="background:none;" /><br />
+            Graduation Year: <input name="year" type="text" value="<?php echo $row_memberInformation['year']; ?>"/><br />
             Phone: <input name="phone" type="text" value="<?php echo $row_memberInformation['phone']; ?>" /><br />
             T-shirt: <select name="tshirt"><option value="s" <?php if (!(strcmp("s", $row_memberInformation['tshirt']))) {echo "selected=\"selected\"";} ?>>Small</option><option value="m" <?php if (!(strcmp("m", $row_memberInformation['tshirt']))) {echo "selected=\"selected\"";} ?>>Medium</option><option value="l" <?php if (!(strcmp("l", $row_memberInformation['tshirt']))) {echo "selected=\"selected\"";} ?>>Large</option><option value="xl" <?php if (!(strcmp("xl", $row_memberInformation['tshirt']))) {echo "selected=\"selected\"";} ?>>Extra Large</option></select><br/>
             Lunch: <select name="lunch"><option value="4" selected="selected" <?php if (!(strcmp(4, $row_memberInformation['lunch']))) {echo "selected=\"selected\"";} ?>>4th</option><option value="5" <?php if (!(strcmp(5, $row_memberInformation['lunch']))) {echo "selected=\"selected\"";} ?>>5th</option><option value="6" <?php if (!(strcmp(6, $row_memberInformation['lunch']))) {echo "selected=\"selected\"";} ?>>6th</option></select><br />
