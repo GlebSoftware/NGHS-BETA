@@ -1,0 +1,392 @@
+*, *:before, *:after {
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+body {
+	margin:0;
+	background:#0D0D0D;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+	text-decoration:none;
+}
+
+.social {
+	position:fixed;
+}
+
+.social div {
+	width: 35px;
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+	color: #FFF;
+	margin: 5px;
+	border-radius: 100%;
+}
+
+.header{
+	background-image: url(../img/feedingTheHomelessBlur.jpg);
+	width: 100%;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	color: #fff;
+	text-align: center;
+	padding: 40px 0 0 0;
+}
+
+.header h1{
+	font-size:50px;
+	font-weight:300;
+}
+
+.header form{
+	width:350px;
+	margin:30px auto;
+	height:90px;
+}
+
+.header form .input{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-style: italic;
+	padding: 10px;
+	border: 0;
+	width: 300px;
+	text-align: center;
+	font-size: 20px;
+	color:#333;
+	margin:0;
+	opacity:0.85;
+	filter:Alpha(opacity=85);
+	float:left;
+}
+
+.header form .button{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight:700;
+	padding: 10px;
+	border: 0;
+	width: 50px;
+	text-align: center;
+	font-size: 20px;
+	color: #fff;
+	background:#000;
+	opacity:0.5;
+	filter:Alpha(opacity=50);
+	margin:0;
+	float:right;
+	cursor:pointer;
+}
+
+.logo {
+	background: #000;
+	opacity: 0.85;
+	filter: Alpha(opacity=85);
+	border-radius: 100%;
+	height: 400px;
+	width: 400px;
+	margin: 25px auto;
+	padding:0;
+	text-align:center;
+	color: #fff;
+}
+
+.logo .title {
+	font-size: 100px;
+	font-weight: 300;
+	text-transform: uppercase;
+	line-height:400px;
+	letter-spacing: -10px;
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+	-o-user-select: none;
+	user-select: none;
+	cursor:default;
+}
+
+.navigation{
+	list-style: none;
+	padding: 0;
+	margin: 25px 0 25px;
+}
+
+.navBar{
+	opacity: .5;
+	filter:Alpha(opacity=50);
+	transition: all .5s;
+	-webkit-transition: all .5s; /* Safari */
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	z-index: 50;
+	text-align:center;
+	color:#fff;
+}
+
+.navBar a{
+	color:#fff;
+}
+
+.topBar{
+	top: -52px;
+	/*top:0px;
+	opacity: 1;
+	filter:Alpha(opacity=100);*/
+}
+
+.topBar:hover{
+	opacity: 1;
+	top: 0px;
+	height: 60px;
+}
+
+.bottomBar{
+	bottom:-52px;
+	padding-top:48px;
+}
+
+.bottomBar:hover{
+	opacity: 1;
+	bottom: 0px;
+	height: 75px;
+	padding-top:25px;
+}
+
+.navBar ul{
+	background: #000;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.navBar ul li{
+	display: inline-block;
+	width: 100px;
+	padding: 15px 0;
+	border-bottom: 0px solid #fff;
+	transition: all 1s;
+}
+
+.navBar ul li.active{
+	border-bottom: 2px solid #fff;
+	background: #F03204;
+}
+
+.navigation li{
+	display: inline-block;
+	width: 100px;
+	padding: 10px 15px;
+	background: #F03204;
+	opacity: .75;
+	filter:Alpha(opacity=100);
+}
+
+.upcoming {
+	text-align:left;
+	margin:10px;
+	display:inline-block;
+}
+
+.upcoming .upcomingEvent{
+	color: #fff;
+	line-height: 40px;
+	font-size: 16px;
+	text-align: left;
+}
+
+.upcoming .upcomingDate{
+	width: 50px;
+	background: #fff;
+	color: #000;
+	float: left;
+	text-align: center;
+	margin: 0 15px 0 0;
+	font-weight: 700;
+	font-size: 18px;	
+}
+
+.upcoming .upcomingDate span{
+	display: block;
+	background: #F03204;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 400;
+	text-transform:uppercase;
+}
+
+.newsBar{
+	background: #4B8A7C;
+	bottom: 0px;
+	width: 100%;
+	left: 0px;
+	opacity: 0.8;
+	margin-top: 0px;
+	padding: 20px;
+	filter: Alpha(opacity=80);
+}
+
+.section {
+	width:100%;
+	display:inline-block;
+	text-align:center;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.section h2{
+	display: inline-block;
+	color: #fff;
+	background: #BEA717;
+	padding: 10px 15px;
+	margin: -25px 0 0;
+	z-index: 50;
+	opacity: .95;
+	filter: Alpha(opacity=95);
+	font-size: 35px;
+	font-style: normal;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.section h2 span{
+	font-style: italic;
+	font-weight: 400;
+	text-transform: lowercase;
+}
+
+.section table {
+	margin:20px auto;
+}
+
+.section table td, .section table th{
+	padding:3px 10px;
+}
+
+.gray {
+	background:#DDD;	
+}
+
+.section form {
+	display: inline-block;
+	margin: 25px;
+	text-align: right;
+	color: #fff;
+}
+
+.about {
+	background-color: #F7F7F7;
+}
+
+.section form input, .section form select, .section form textarea{
+	min-width: 175px;
+	background: #222;
+	border: none;
+	padding: 5px 0 5px 10px;
+	margin: 2px 10px;
+	color: #eee;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 15px;
+	font-style: italic;
+}
+
+.container {
+	background: #000;
+	opacity: .75;
+	display: inline-block;
+	width: 500px;
+	color:#FFF;
+}
+
+.container h2{
+	font-size:25px;
+	font-weight:400;
+}
+
+.event{
+	margin: 10px 0;
+	padding: 5px;
+	background: #fff;
+}
+
+.event h1{
+	margin:10px;
+}
+
+.event .button
+{
+	display: block;
+	background: #F03204;
+	width: 100%;
+	color: #fff;
+	padding: 10px;
+	text-transform: uppercase;
+}
+
+#whyilovebeta {
+	background:#DDD;
+}
+
+#whyilovebeta ul {
+	list-style:none;
+	margin:0 auto;
+	padding:0;
+	max-width:900px;
+	height:285px;
+	overflow:hidden;
+}
+
+#whyilovebeta ul li {
+	display:inline-table;
+	width:23%;
+	margin:10px 1%;
+	background:#FFF;
+	padding:10px;
+	text-align:center;
+	height:275px;
+}
+
+#whyilovebeta a{
+	color:#000;
+	text-decoration:none;
+}
+
+#whyilovebeta .user span {
+	display:block;
+	font-size:14px;
+}
+
+#whyilovebeta .user span:first-child {
+	font-size:18px;
+}
+
+#whyilovebeta .tweet {
+	margin:10px 0;
+}
+
+#whyilovebeta .tweet a{
+	color:#F03204;
+	text-decoration:none;
+}
+
+#whyilovebeta .timePosted {
+	font-size:14px;
+	color:#999;
+	font-style:italic;
+}
+
+.footer {
+	font-weight:300;
+	color:#999;
+	padding:15px;
+	font-size:smaller;
+}
+
+.footer a{
+	color:#CCC;
+	text-decoration:none;
+	font-weight:400;
+}

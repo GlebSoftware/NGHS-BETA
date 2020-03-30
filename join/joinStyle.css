@@ -1,0 +1,166 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background: #111 url('twinkle_twinkle.png');
+}
+
+.background{
+   width:50%;
+   height:50%;
+   position:fixed;
+   z-index:-1;
+   background-position:center;
+   background-size:cover;
+   background-repeat:no-repeat;
+   opacity:0.4;
+   filter:Alpha(opacity=40); /* IE8 and earlier */
+   transition: opacity 1s;
+   -moz-transition: opacity 1s;
+   -webkit-transition: opacity 1s;
+   -o-transition: opacity 1s;  
+ }
+
+#topleft {
+   background-image:url('img/feedingTheHomeless.jpg'); 
+   left:0px;
+   top:0px;
+ } 
+
+#topright {
+   background-image:url('img/suwaneeDay.jpg');
+   right:0px;
+   top:0px;
+ }
+
+#bottomleft {
+   background-image:url('../img/convention.jpg');
+   left:0px;
+   bottom:0px;
+ } 
+
+#bottomright {
+   background-image:url('img/hauntedHouse.jpg'); 
+   background-position:top;
+   right:0px;
+   bottom:0px;
+ } 
+
+div.background:hover{ 
+   opacity:0.85;
+   filter:Alpha(opacity=85); /* IE8 and earlier */
+  } 
+
+.topBar {
+	background:#111;
+	width:100%;
+	min-width:600px;
+	height:200px;
+	text-align:center;
+	font-family: 'Chau Philomene One', sans-serif;
+	color:#FFF;
+	padding-top:50px;
+}
+
+.topBar .header {
+	font-size:150px;
+	line-height:100px;
+	font-family: 'Coustard', serif;
+	letter-spacing:5px;
+}
+
+.topBar .subtitle {
+	font-size:50px;
+	text-transform: uppercase;	
+}
+
+.main {
+	background:#FFF;
+	font-family: 'Coustard', serif;
+	text-align:center;
+	position:absolute;
+	width: 800px;
+	margin:50px 50% 50px;
+	left:-400px;
+	font-size:15px;
+	box-shadow: 0 0 20px #444;
+	padding: 10px;
+   opacity:0.8;
+   filter:Alpha(opacity=80); /* IE8 and earlier */
+}
+
+.highlight {
+	color:#FFF;
+	padding:10px 15px;
+}
+
+.formInputs {
+	width:600px;
+	margin:0 auto;
+	text-align:right;
+	display: block;
+	margin-top: 0em;
+}
+
+.checkbox {
+	margin:20px; 
+	width: 20px;
+	height: 10px;
+}
+
+.formInputs .highlight {
+	line-height:20px;
+	text-transform:uppercase;
+	letter-spacing:5px;
+	text-align:center;
+}
+
+.formInputs p {
+	text-align:center;
+}
+
+.grey {
+	line-height:20px;
+	text-transform:uppercase;
+	letter-spacing:5px;
+}
+
+.field {
+	border:0; 
+	padding:10px; 
+	font-size:1.3em; 
+	color:#333; 
+	border:solid 1px #ccc; 
+	margin:0 0 20px; 
+	width:300px;
+}
+
+.fieldDrop{
+	padding:10px; 
+	font-size:1.3em; 
+	color:#333; 
+	border:solid 1px #ccc; 
+	margin:0 0 20px; 
+	width:320px;
+}
+
+.bt_register {
+	border:solid 1px #444; 
+	padding:15px 30px; 
+	margin:0 0 20px; 
+	text-transform:uppercase;
+	font-weight:bold;
+	color:#FFF;
+	cursor:pointer;
+	letter-spacing:5px;
+	background:#3F5758;
+	text-align:center;
+}
+
+.err {
+	color:#F00;
+}
+
+.success {
+	color:#060;
+}
